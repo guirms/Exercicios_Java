@@ -44,9 +44,10 @@ public class ProgramaFuncionarios {
 		}
 		
 		sc.close();
-
+		
+		System.out.print("\nPAGAMENTOS:");
 		for (Funcionario lista : listaFuncionario) {
-			System.out.print("\n" + lista.getNome() + " - " + lista.pagamento());
+			System.out.print("\n" + lista.getNome() + " - $" +  String.format("%.2f", lista.pagamento()));
 		}
 	}
 
