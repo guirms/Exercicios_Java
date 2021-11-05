@@ -37,11 +37,9 @@ public class ProgramaFuncionarios {
 			if (resp.equals("S")) {
 				System.out.print("Valor despesa adicional: ");
 				double despesaAdicional = sc.nextDouble();
-				Funcionario funcionarioTerceirizado = new FuncionarioTerceirizado(nome, horas, valorHora, despesaAdicional);
-				listaFuncionario.add(funcionarioTerceirizado);
+				listaFuncionario.add(new FuncionarioTerceirizado(nome, horas, valorHora, despesaAdicional));
 			} else {
-				Funcionario funcionario = new Funcionario(nome, horas, valorHora);
-				listaFuncionario.add(funcionario);
+				listaFuncionario.add(new Funcionario(nome, horas, valorHora));
 			}
 		}
 		
