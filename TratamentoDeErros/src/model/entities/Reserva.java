@@ -60,7 +60,7 @@ public class Reserva {
 	public void atualizarReserva(Date checkIn, Date checkOut) throws ErroDominio {
 		Date dataAtual = new Date(); {
 			if (checkIn.before(dataAtual) || checkOut.before(dataAtual)) {
-				throw new ErroDominio("atas de reserva atualizadas precisam ser maiores do que a atual");
+				throw new ErroDominio("Datas de reserva atualizadas precisam ser maiores do que a atual");
 			}
 			if (!checkOut.after(checkIn)){
 				throw new ErroDominio("Datas de check-out precisam ser maiores do que a de check-in");
