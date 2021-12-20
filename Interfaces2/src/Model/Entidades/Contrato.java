@@ -63,7 +63,7 @@ public class Contrato {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(data);
-		pagamentoOnline.valorParcela(valorTotal, numeroMeses);
+		pagamentoOnline.valorParcela(getValorTotal(), getNumeroMeses());
 		System.out.println("\nParcelas:");
 		for (int i = 1; i <= getNumeroMeses(); i++) {
 			cal.add(Calendar.MONTH, 1);

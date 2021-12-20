@@ -7,7 +7,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import Model.Entidades.Contrato;
-import Model.Servicos.ServicoPagamentoOnline;
+import Model.Servicos.ServicoPayPal;
 
 public class Programa {
 
@@ -29,7 +29,7 @@ public class Programa {
 		int numParcelas = sc.nextInt();
 		sc.close();
 		
-		Contrato contrato = new Contrato(numero, numParcelas, data, preco, new ServicoPagamentoOnline());
+		Contrato contrato = new Contrato(numero, numParcelas, data, preco, new ServicoPayPal());
 		contrato.printarParcelas();
 	}
 
