@@ -1,0 +1,4 @@
+Maria, maria@gmail.com, 3200.00
+Alex, alex@gmail.com, 1900.00
+Marcos, marcos@gmail.com, 1700.00
+Ana, ana@gmail.com, 2001.00
