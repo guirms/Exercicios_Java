@@ -1,15 +1,18 @@
 package gui;
 
+import java.net.URL;
 import java.util.Locale;
+import java.util.ResourceBundle;
 
 import gui.util.Alerts;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class ViewController {
+public class ViewController implements Initializable{
 	@FXML
 	private TextField txtNumero1;
 
@@ -25,16 +28,18 @@ public class ViewController {
 	@FXML
 	public void onBotaoSomaAction() {
 		Locale.setDefault(Locale.US);
-			try {
 		double num1 = Double.parseDouble(txtNumero1.getText());
 		double num2 = Double.parseDouble(txtNumero2.getText());
-
 		double soma = num1 + num2;
 		labelResultado.setText(String.format("%.2f", soma));
-		} catch(NumberFormatException nfe) {
-			Alerts.showAlert("Erro","Digitação incorreta", nfe.getLocalizedMessage(), AlertType.ERROR);
-		}
+	}
 
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
+		Constraints.setTextFieldDouble(txtNumero1);
+		Constraints.setTextFieldDouble(txtNumero2);
+		Constraints.setTextFieldMaxLength(txtNumero1, 10);
+		Constraints.setTextFieldMaxLength(txtNumero2, 10);		
 	}
 
 }
