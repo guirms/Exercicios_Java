@@ -12,7 +12,7 @@ public class Programa {
 		cookies.put("usuario", "joao123");
 		cookies.put("email", "maria@gmail.com");
 		
-		System.out.println(cookies.get("usuarioa"));
+		System.out.println(cookies.get("usuario"));
 		
 		cookies.remove("email");
 		

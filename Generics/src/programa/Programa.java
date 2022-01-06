@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import entidades.Entidades;
 
-public class Pograma {
+public class Programa {
 
 	public static void main(String[] args) {
 		

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-import Entidades.ConsumerTeste;
 import Entidades.Produtos;
 
 public class Programa {
